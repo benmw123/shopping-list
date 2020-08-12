@@ -22,11 +22,13 @@ $('#js-shopping-list-form').on('submit', function(event) {
         event.preventDefault(); 
 }); 
 
+//need to figure out how to only select this.grandparent. 
 $('.shopping-item-toggle').click(function() {
-    $('.shopping-item').toggleClass('shopping-item__checked'); 
+    $(this).parents('li').toggleClass('shopping-item__checked'); 
+    
 });   
 
-    
+//i also need to fix the padding on the appending shopping list item controls 
     
 
 
