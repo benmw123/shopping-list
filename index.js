@@ -20,7 +20,11 @@ $('#js-shopping-list-form').on('submit', function(event) {
         $('#shopping-list-entry').val('');
         //prevents default form behavior. 
         event.preventDefault(); 
-});    
+}); 
+
+$('.shopping-item-toggle').click(function() {
+    $('.shopping-item').toggleClass('shopping-item__checked'); 
+});   
 
     
     
