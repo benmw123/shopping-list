@@ -24,7 +24,8 @@ $('document').ready(function() {
             event.preventDefault(); 
     }); 
     
-    //updated my code to include event delegation.
+    /*updated my code to include event delegation. I selected the parent element, 'shopping-list'
+    this allows event listeners to be added to the new child elements*/
     $('.shopping-list').on('click', '.shopping-item-delete', function () {
         $(this).closest('li').remove(); 
     });
