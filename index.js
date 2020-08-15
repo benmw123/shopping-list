@@ -23,14 +23,15 @@ $('document').ready(function() {
             //prevents default form behavior. 
             event.preventDefault(); 
     }); 
-
-    $('.shopping-item-delete').on('click', function () {
+    
+    //updated my code to include event delegation.
+    $('.shopping-list').on('click', '.shopping-item-delete', function () {
         $(this).closest('li').remove(); 
     });
 
-    $('.shopping-item-toggle').on('click', function () {
+    $('.shopping-list').on('click', '.shopping-item-toggle',  function () {
         $(this).parents('li').children('span').toggleClass('shopping-item__checked');    
-    });   
+    });
     
 });
 
